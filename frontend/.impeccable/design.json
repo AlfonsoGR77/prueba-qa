@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-24T18:48:36.867Z",
+  "title": "Design System: EnergIA",
+  "extensions": {
+    "colorMeta": {
+      "form-paper": {
+        "role": "neutral",
+        "displayName": "Papel de formulario",
+        "canonical": "#f6f7f4",
+        "tonalRamp": [
+          "#4a4a49",
+          "#878886",
+          "#c5c6c3",
+          "#f6f7f4",
+          "#f9f9f7",
+          "#fbfbfa",
+          "#fdfdfc",
+          "#fefefe"
+        ]
+      },
+      "sheet-white": {
+        "role": "neutral",
+        "displayName": "Hoja blanca",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#4d4d4d",
+          "#8c8c8c",
+          "#cccccc",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ]
+      },
+      "data-ink": {
+        "role": "neutral",
+        "displayName": "Tinta de datos",
+        "canonical": "#1b1f1d",
+        "tonalRamp": [
+          "#080909",
+          "#0f1110",
+          "#161917",
+          "#1b1f1d",
+          "#5f6261",
+          "#989a99",
+          "#c6c7c7",
+          "#e8e9e8"
+        ]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Tinta tenue",
+        "canonical": "#55605a",
+        "tonalRamp": [
+          "#1a1d1b",
+          "#2f3532",
+          "#444d48",
+          "#55605a",
+          "#88908c",
+          "#b3b7b5",
+          "#d5d7d6",
+          "#eeefef"
+        ]
+      },
+      "form-green": {
+        "role": "primary",
+        "displayName": "Verde de formulario",
+        "canonical": "#1f5b48",
+        "tonalRamp": [
+          "#091b16",
+          "#113228",
+          "#19493a",
+          "#1f5b48",
+          "#628c7f",
+          "#9ab5ad",
+          "#c7d6d1",
+          "#e9efed"
+        ]
+      },
+      "form-green-deep": {
+        "role": "primary",
+        "displayName": "Verde de formulario profundo",
+        "canonical": "#16463a",
+        "tonalRamp": [
+          "#071511",
+          "#0c2720",
+          "#12382e",
+          "#16463a",
+          "#5c7e75",
+          "#96aca6",
+          "#c5d1ce",
+          "#e8edeb"
+        ]
+      },
+      "form-green-wash": {
+        "role": "primary",
+        "displayName": "Lavado de formulario",
+        "canonical": "#edf4ef",
+        "tonalRamp": [
+          "#474948",
+          "#828683",
+          "#bec3bf",
+          "#edf4ef",
+          "#f2f7f4",
+          "#f7faf8",
+          "#fbfcfb",
+          "#fdfefd"
+        ]
+      },
+      "form-rule": {
+        "role": "neutral",
+        "displayName": "Regla",
+        "canonical": "#c6d6cc",
+        "tonalRamp": [
+          "#3b403d",
+          "#6d7670",
+          "#9eaba3",
+          "#c6d6cc",
+          "#d7e2db",
+          "#e5ede8",
+          "#f1f5f2",
+          "#f9fbfa"
+        ]
+      },
+      "form-rule-strong": {
+        "role": "neutral",
+        "displayName": "Regla fuerte",
+        "canonical": "#8fae9f",
+        "tonalRamp": [
+          "#2b3430",
+          "#4f6057",
+          "#728b7f",
+          "#8fae9f",
+          "#b1c6bc",
+          "#cddbd4",
+          "#e3ebe7",
+          "#f4f7f5"
+        ]
+      },
+      "greenbar": {
+        "role": "neutral",
+        "displayName": "Green-bar",
+        "canonical": "#e8f1eb",
+        "tonalRamp": [
+          "#464847",
+          "#808581",
+          "#bac1bc",
+          "#e8f1eb",
+          "#eff5f1",
+          "#f5f9f6",
+          "#f9fcfa",
+          "#fdfefd"
+        ]
+      },
+      "stamp-vermilion": {
+        "role": "secondary",
+        "displayName": "Sello bermellón",
+        "canonical": "#b93a22",
+        "tonalRamp": [
+          "#38110a",
+          "#662013",
+          "#942e1b",
+          "#b93a22",
+          "#ce7564",
+          "#e0a69c",
+          "#eecec8",
+          "#f8ebe9"
+        ]
+      },
+      "stamp-vermilion-wash": {
+        "role": "secondary",
+        "displayName": "Lavado bermellón",
+        "canonical": "#fbece8",
+        "tonalRamp": [
+          "#4b4746",
+          "#8a8280",
+          "#c9bdba",
+          "#fbece8",
+          "#fcf2ef",
+          "#fdf6f5",
+          "#fefaf9",
+          "#fffdfd"
+        ]
+      },
+      "stamp-ochre": {
+        "role": "secondary",
+        "displayName": "Sello ocre",
+        "canonical": "#8f6206",
+        "tonalRamp": [
+          "#2b1d02",
+          "#4f3603",
+          "#724e05",
+          "#8f6206",
+          "#b19151",
+          "#cdb88f",
+          "#e3d8c1",
+          "#f4efe6"
+        ]
+      },
+      "stamp-ochre-wash": {
+        "role": "secondary",
+        "displayName": "Lavado ocre",
+        "canonical": "#fbf2de",
+        "tonalRamp": [
+          "#4b4943",
+          "#8a857a",
+          "#c9c2b2",
+          "#fbf2de",
+          "#fcf6e8",
+          "#fdf9f0",
+          "#fefcf7",
+          "#fffefc"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Código del medidor en la orden principal y la investigación."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Título de cada pantalla."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Encabezado de cada hoja, sobre la regla verde."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Explicación de la IA y acción recomendada (62–65ch)."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Etiquetas preimpresas de casillas y columnas."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Valores llenados a máquina: cifras, códigos, horas."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Sellos, pasos del análisis y la hoja del análisis."
+      },
+      {
+        "name": "stamp",
+        "value": "180ms ease-out-expo; scale 1.08 → 1, rotate -2deg",
+        "purpose": "El sello se presiona una vez al aparecer."
+      },
+      {
+        "name": "tick",
+        "value": "220ms ease-out-expo; clip-path de izquierda a derecha, 90ms entre pasos",
+        "purpose": "Cada paso terminado del análisis se chequea en orden."
+      },
+      {
+        "name": "state",
+        "value": "150ms ease-out",
+        "purpose": "Hover y cambios de color de controles."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal del contexto (Run AI Analysis, Entrar, Abrir investigación).",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M6 4l14 8-14 8z\"/></svg>Run AI Analysis</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border:1px solid #16463a;background:#1f5b48;color:#fff;font:600 14px 'Archivo Variable',system-ui,sans-serif;border-radius:0;cursor:pointer;transition:background-color 150ms ease-out}.ds-btn-primary:hover{background:#16463a}.ds-btn-primary:active{transform:translateY(1px)}.ds-btn-primary:focus-visible{outline:2px solid #1f5b48;outline-offset:2px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Acciones de apoyo: filtrar, paginar, ver el medidor.",
+      "html": "<button class=\"ds-btn-secondary\">Filtrar y ordenar</button>",
+      "css": ".ds-btn-secondary{height:36px;padding:0 12px;border:1px solid #8fae9f;background:#fff;color:#1f5b48;font:600 14px 'Archivo Variable',system-ui,sans-serif;border-radius:0;cursor:pointer;transition:border-color 150ms ease-out,background-color 150ms ease-out}.ds-btn-secondary:hover{border-color:#1f5b48;background:#edf4ef}.ds-btn-secondary:focus-visible{outline:2px solid #1f5b48;outline-offset:2px}"
+    },
+    {
+      "name": "Casilla (Field)",
+      "kind": "card",
+      "refersTo": "field",
+      "description": "Etiqueta preimpresa arriba y valor llenado a máquina debajo.",
+      "html": "<div class=\"ds-field\"><span class=\"ds-field-label\">Consumo actual · 24 h</span><span class=\"ds-field-value\">2.207,6 kWh</span><span class=\"ds-field-note\">+109,8 % vs. baseline</span></div>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:4px;padding:8px 12px 10px;border:1px solid #c6d6cc;background:#fff;width:220px}.ds-field-label{font:600 11px/16px 'Archivo Variable',sans-serif;font-stretch:72%;letter-spacing:.06em;text-transform:uppercase;color:#1f5b48}.ds-field-value{font:400 18px/24px 'Courier Prime',monospace;color:#1b1f1d}.ds-field-note{font:400 12px/16px 'Archivo Variable',sans-serif;color:#55605a}"
+    },
+    {
+      "name": "Sello",
+      "kind": "chip",
+      "refersTo": "stamp-critical",
+      "description": "Estado de alerta. Crítica llena; Alerta de contorno; Normal sin sello.",
+      "html": "<span class=\"ds-stamp ds-stamp-critical\">Crítica</span> <span class=\"ds-stamp ds-stamp-alert\">Alerta</span>",
+      "css": ".ds-stamp{display:inline-flex;padding:2px 8px;border:2px solid;font:700 12px 'Archivo Variable',sans-serif;font-stretch:78%;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-2deg)}.ds-stamp-critical{background:#b93a22;border-color:#b93a22;color:#fff}.ds-stamp-alert{background:#fbf2de;border-color:#8f6206;color:#8f6206}"
+    },
+    {
+      "name": "Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Casilla de texto con etiqueta preimpresa.",
+      "html": "<label class=\"ds-input-wrap\"><span class=\"ds-input-label\">Medidor</span><input class=\"ds-input\" placeholder=\"M-109\"></label>",
+      "css": ".ds-input-wrap{display:flex;flex-direction:column;gap:4px;width:240px}.ds-input-label{font:600 11px/16px 'Archivo Variable',sans-serif;font-stretch:72%;letter-spacing:.06em;text-transform:uppercase;color:#1f5b48}.ds-input{height:40px;padding:0 12px;border:1px solid #8fae9f;background:#fff;font:400 14px 'Courier Prime',monospace;color:#1b1f1d;caret-color:#1f5b48;border-radius:0;outline:none;transition:border-color 150ms ease-out}.ds-input:hover,.ds-input:focus-visible{border-color:#1f5b48}.ds-input:focus-visible{outline:2px solid #1f5b48;outline-offset:2px}"
+    },
+    {
+      "name": "Navegación de despacho",
+      "kind": "nav",
+      "description": "Barra fija: marca, enlaces con pestaña activa sobre la regla y acción principal.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link ds-active\" href=\"#\">Despacho</a><a class=\"ds-nav-link\" href=\"#\">Medidores</a><a class=\"ds-nav-link\" href=\"#\">Anomalías IA</a></nav>",
+      "css": ".ds-nav{display:flex;border-bottom:1px solid #1f5b48;background:#f6f7f4;padding:0 8px}.ds-nav-link{position:relative;padding:12px;font:500 14px 'Archivo Variable',sans-serif;color:#55605a;text-decoration:none;transition:color 150ms ease-out}.ds-nav-link:hover{color:#1f5b48}.ds-nav-link.ds-active{color:#1b1f1d;font-weight:600}.ds-nav-link.ds-active::after{content:'';position:absolute;left:12px;right:12px;bottom:-1px;height:3px;background:#1f5b48}"
+    },
+    {
+      "name": "Contador de confianza",
+      "kind": "custom",
+      "description": "Diez celdas, cada una una décima, siempre con el número.",
+      "html": "<span class=\"ds-meter\"><span class=\"ds-cells\"><i style=\"--f:1\"></i><i style=\"--f:1\"></i><i style=\"--f:1\"></i><i style=\"--f:1\"></i><i style=\"--f:1\"></i><i style=\"--f:1\"></i><i style=\"--f:1\"></i><i style=\"--f:1\"></i><i style=\"--f:1\"></i><i style=\"--f:0.5\"></i></span><b>0,95</b></span>",
+      "css": ".ds-meter{display:inline-flex;align-items:center;gap:8px;font:400 14px 'Courier Prime',monospace;color:#1b1f1d}.ds-meter b{font-weight:400}.ds-cells{display:grid;grid-template-columns:repeat(10,6px);gap:2px}.ds-cells i{height:12px;border:1px solid rgba(31,91,72,.6);background:linear-gradient(90deg,#1f5b48 calc(var(--f)*100%),#fff 0)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El talonario de órdenes",
+    "overview": "EnergIA se ve como el talonario de órdenes de trabajo de una empresa de energía: un formulario preimpreso en una sola tinta verde, llenado a máquina, con sellos de goma para el estado. La IA no pinta alarmas: emite órdenes numeradas y priorizadas, y cada una lleva su evidencia adjunta.",
+    "keyCharacteristics": [
+      "Formulario preimpreso: casillas con etiqueta arriba a la izquierda y valor debajo.",
+      "Cifras en máquina de escribir, tabulares y alineadas.",
+      "Estado con sellos que siempre llevan texto.",
+      "Bandas green-bar en las tablas largas.",
+      "Sin esquinas redondeadas ni sombras."
+    ],
+    "rules": [
+      {
+        "name": "La regla del sello",
+        "body": "El color de estado solo aparece en sellos, en la severidad y en filos de 1px. El texto de las explicaciones siempre es acromático.",
+        "section": "colors"
+      },
+      {
+        "name": "La regla del silencio",
+        "body": "Un medidor normal no lleva sello ni color: escribe \"Normal\" en tinta tenue.",
+        "section": "colors"
+      },
+      {
+        "name": "La regla de nunca solo color",
+        "body": "Cada sello lleva su palabra; cada severidad, su forma (flechas dobles, flecha simple o guion) y su palabra.",
+        "section": "colors"
+      },
+      {
+        "name": "La regla de las dos capas",
+        "body": "Si el texto lo imprimió el formulario, va en Archivo; si lo llenó el sistema (una medición, un código, una hora), va en Courier Prime.",
+        "section": "typography"
+      },
+      {
+        "name": "La regla sin kicker",
+        "body": "Una etiqueta preimpresa va en una casilla o en la banda del talón, nunca flotando encima de un título.",
+        "section": "typography"
+      },
+      {
+        "name": "La regla plana",
+        "body": "Nada flota. Si algo necesita más jerarquía, gana un borde verde o más escala, nunca una sombra.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do poner cada cifra medida en Courier Prime y cada etiqueta en Archivo condensado en mayúsculas.",
+      "Do marcar el estado con un sello que diga su palabra, y dejar sin sello lo que está normal.",
+      "Do separar grupos de casillas con 1px de regla, no con espacio vacío ni con sombras.",
+      "Do mostrar las horas del dataset como hora de planta, sin convertirlas.",
+      "Do acompañar toda confianza con su número."
+    ],
+    "donts": [
+      "Don't usar esquinas redondeadas, sombras ni degradados.",
+      "Don't simular papel: nada de texturas, esquinas dobladas ni rotaciones fuera de los sellos.",
+      "Don't usar bermellón u ocre en texto largo, fondos grandes o decoración.",
+      "Don't poner una etiqueta pequeña encima de un título (kicker).",
+      "Don't usar Courier Prime para prosa ni Archivo para cifras en tablas."
+    ]
+  }
+}

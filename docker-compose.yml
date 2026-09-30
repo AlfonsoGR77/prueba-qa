@@ -1,0 +1,27 @@
+services:
+  backend:
+    build: ./backend
+    # Los valores salen del .env de esta carpeta (el único del proyecto).
+    # PORT y DATA_DIR no se pasan: dentro del contenedor son fijos (8080 y /app/data).
+    environment:
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://localhost:3000}
+      JWT_SECRET: ${JWT_SECRET:-dev-secret-change-me}
+      JWT_TTL: ${JWT_TTL:-8h}
+      AUTH_EMAIL: ${AUTH_EMAIL:-admin@energia.local}
+      AUTH_PASSWORD: ${AUTH_PASSWORD:-admin123}
+      AUTH_NAME: ${AUTH_NAME:-Operador}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com/v1}
+      OPENAI_TIMEOUT: ${OPENAI_TIMEOUT:-30s}
+    ports:
+      - "8080:8080" # Swagger en http://localhost:8080/docs
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

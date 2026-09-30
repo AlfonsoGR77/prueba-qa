@@ -1,0 +1,145 @@
+@import 'tailwindcss';
+
+/*
+ * Tema oscuro con la paleta de BIA Energy (bia.app): fondo casi negro,
+ * superficies grafito, menta #08DDBC como color de acción y bordes redondeados.
+ * Los nombres de los tokens se mantienen para no tocar cada componente:
+ * - paper/sheet: fondo de página y superficie de las tarjetas.
+ * - ink/ink-muted: texto principal y secundario.
+ * - form: el acento de marca (menta). text-sheet sobre bg-form da texto oscuro.
+ * - critical/alert: estado. El color nunca va solo: siempre lleva texto.
+ */
+@theme {
+  --color-paper: #0f0f0f;
+  --color-sheet: #1a1a1a;
+  --color-ink: #fafafa;
+  --color-ink-muted: #a1a1aa;
+  --color-form: #08ddbc;
+  --color-form-strong: #17ffdb;
+  --color-form-wash: #16302b;
+  --color-rule: #27272a;
+  --color-rule-strong: #3f3f46;
+  --color-greenbar: #202023;
+  --color-critical: #f87171;
+  --color-critical-wash: #2c1717;
+  --color-alert: #fbbf24;
+  --color-alert-wash: #2d2410;
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-data: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-stamp: stamp 180ms var(--ease-out-expo) both;
+  --animate-tick: tick 220ms var(--ease-out-expo) both;
+  --animate-sheet: sheet 240ms var(--ease-out-expo) both;
+
+  @keyframes stamp {
+    from {
+      transform: scale(0.92);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes tick {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  @keyframes sheet {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background-color: var(--color-paper);
+    /* Brillo menta muy suave arriba, como en bia.app. */
+    background-image: radial-gradient(60rem 24rem at 50% -8rem, rgb(8 221 188 / 0.08), transparent 70%);
+    background-repeat: no-repeat;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: 'tnum' 1;
+  }
+  ::selection {
+    background-color: var(--color-form);
+    color: var(--color-paper);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-form);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  a {
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  * {
+    scrollbar-color: var(--color-rule-strong) transparent;
+    scrollbar-width: thin;
+  }
+  input,
+  select {
+    caret-color: var(--color-form);
+  }
+}
+
+@layer components {
+  /* Etiqueta de un dato: pequeña y en gris, para que el valor sea lo que resalte. */
+  .form-label {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--color-ink-muted);
+  }
+  /* Cifras: tabulares para que se alineen en tablas y KPI. */
+  .data {
+    font-family: var(--font-data);
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  /* Tarjeta: superficie grafito, borde sutil y esquinas redondeadas. */
+  .card {
+    border: 1px solid var(--color-rule);
+    background-color: var(--color-sheet);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  /* Bandas suaves para tablas largas. */
+  .greenbar > :nth-child(even) {
+    background-color: var(--color-greenbar);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

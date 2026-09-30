@@ -1,0 +1,13 @@
+# Secretos: nunca se suben. La plantilla es .env.example.
+.env
+.env.local
+
+# Backend
+*.exe
+
+# Frontend
+node_modules
+dist
+*.tsbuildinfo
+frontend/.impeccable/review
+frontend/.impeccable/questions
