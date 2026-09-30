@@ -2,7 +2,7 @@
 
 Bienvenido/a. Esta prueba evalúa cómo **diseñas, ejecutas y comunicas** pruebas sobre un producto real: una plataforma que monitorea medidores eléctricos y usa IA para detectar anomalías de consumo (backend en Go, frontend en React).
 
-**Tiempo sugerido:** 4 a 6 horas. **Plazo de entrega:** el que te indique el equipo de selección.
+**Plazo de entrega:** 2 días calendario a partir del momento en que recibes la prueba.
 
 > El producto **tiene defectos**. Parte de la prueba es encontrarlos. No te decimos cuántos ni dónde.
 
@@ -100,7 +100,11 @@ Crea un proyecto de Playwright (TypeScript) en una carpeta `e2e/` en la raíz de
 
 ## 3. Entregables
 
-Haz un fork o un repo privado a partir de este y comparte el acceso. Estructura sugerida:
+Haz un fork o un repo privado a partir de este y comparte el acceso. La entrega tiene dos partes:
+
+**1. Un video** (máximo 15 minutos) donde expliques todo tu trabajo: la estrategia, los casos más importantes, los defectos que encontraste (reprodúcelos en pantalla) y la ejecución de tus tests de Playwright. Compártelo como enlace (YouTube no listado, Loom, Google Drive, etc.) en el README de tu entrega.
+
+**2. Los archivos** de la prueba, con esta estructura:
 
 ```
 qa/
@@ -116,7 +120,7 @@ e2e/
 └── tests/...
 ```
 
-Cierra con un **resumen ejecutivo** de media página: ¿liberarías este build a producción? ¿Por qué? ¿Qué riesgos quedan abiertos?
+Cierra con un **resumen ejecutivo** de media página (al final del video y por escrito en `qa/01-plan-de-pruebas.md` o en un README): ¿liberarías este build a producción? ¿Por qué? ¿Qué riesgos quedan abiertos?
 
 ---
 
