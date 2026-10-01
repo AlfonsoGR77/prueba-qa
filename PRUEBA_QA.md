@@ -1,4 +1,4 @@
-# Prueba técnica · QA Senior
+# Prueba técnica · QA 
 
 Bienvenido/a. Esta prueba evalúa cómo **diseñas, ejecutas y comunicas** pruebas sobre un producto real: una plataforma que monitorea medidores eléctricos y usa IA para detectar anomalías de consumo (backend en Go, frontend en React).
 
