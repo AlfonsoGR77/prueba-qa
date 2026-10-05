@@ -1,0 +1,94 @@
+name: QA · unit + E2E
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  unit:
+    name: Unit tests (Go + Vitest)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: backend/go.mod
+          cache-dependency-path: backend/go.sum
+
+      - name: go test (suite del equipo + tests QA verdes)
+        working-directory: backend
+        run: go test -cover ./...
+
+      - name: go test -tags defects (evidencia de defectos abiertos, no bloquea)
+        working-directory: backend
+        continue-on-error: true
+        run: go test -tags defects ./internal/...
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+      - name: Vitest + lint + typecheck
+        working-directory: frontend
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm test
+          pnpm lint
+          pnpm typecheck
+
+  e2e:
+    name: Playwright (API + UI, America/Bogota y UTC)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      START_APP: '1'          # Playwright levanta backend (go run) y frontend (pnpm dev) con webServer
+      BASE_URL: http://127.0.0.1:5173
+      API_URL: http://127.0.0.1:8080
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: backend/go.mod
+          cache-dependency-path: backend/go.sum
+      - name: Precompilar backend (evita timeout del webServer)
+        working-directory: backend
+        run: go build ./...
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+      - name: Dependencias del frontend
+        working-directory: frontend
+        run: pnpm install --frozen-lockfile
+
+      - name: Dependencias de Playwright
+        working-directory: e2e
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Playwright
+        working-directory: e2e
+        run: npx playwright test
+
+      - name: Reporte HTML
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            e2e/playwright-report/
+            e2e/test-results/
+          retention-days: 14

@@ -1,0 +1,57 @@
+# Backend · tests que evidencian defectos (build tag defects)
+# Comando: (cd backend) go test -tags defects ./internal/...
+# Esperado: FALLAN 7 tests: DEF-03, DEF-04, DEF-05, DEF-06, DEF-08 (salida 1 es lo esperado)
+# Código de salida: 1
+# Fecha:      2026-10-04T18:45:43.079Z
+# SO:         Windows_NT 10.0.26200 (win32 x64)
+# Go:         go version go1.27.1 windows/amd64
+# Node:       v24.21.0
+# pnpm:       10.34.6
+# App:        commit 15765d9 (código de la aplicación sin modificar)
+
+ok  	energyai/internal/ai	1.188s
+--- FAIL: TestQA_SingleMissingHourDoesNotProduceZeroDate (0.00s)
+    quality_defects_test.go:32: anomalía DATA_QUALITY con detected_at=0001-01-01 00:00:00 +0000 UTC (fecha cero) por una sola hora faltante
+FAIL
+FAIL	energyai/internal/analysis	0.705s
+ok  	energyai/internal/analysis/baseline	0.557s
+ok  	energyai/internal/analysis/changes	0.576s
+--- FAIL: TestQA_RealSeverityBoundaries (0.00s)
+    severity_defects_test.go:32: realSeverity(50.00%, ongoing=true) = HIGH, esperaba MEDIUM
+    severity_defects_test.go:32: realSeverity(-50.00%, ongoing=true) = HIGH, esperaba MEDIUM
+    severity_defects_test.go:32: realSeverity(20.00%, ongoing=false) = MEDIUM, esperaba LOW
+FAIL
+FAIL	energyai/internal/analysis/classify	0.683s
+?   	energyai/internal/analysis/model	[no test files]
+ok  	energyai/internal/analysis/quality	0.738s
+ok  	energyai/internal/analysis/stats	0.637s
+?   	energyai/internal/analysis/variables	[no test files]
+?   	energyai/internal/anomaly	[no test files]
+ok  	energyai/internal/auth	2.106s
+ok  	energyai/internal/config	0.546s
+?   	energyai/internal/dashboard	[no test files]
+ok  	energyai/internal/data	0.601s
+--- FAIL: TestQA_PaginateNegativePageDoesNotPanic (0.00s)
+    paging_defects_test.go:12: Paginate con page=-1 hizo panic: runtime error: slice bounds out of range [:-5]
+FAIL
+FAIL	energyai/internal/httpx	1.016s
+--- FAIL: TestQA_StatusOf_DecisionTable (0.00s)
+    --- FAIL: TestQA_StatusOf_DecisionTable/FALSE_POSITIVE_+_LOW_→_NORMAL (0.00s)
+        defects_test.go:39: StatusOf(FALSE_POSITIVE,LOW) = ALERT, esperaba NORMAL
+    --- FAIL: TestQA_StatusOf_DecisionTable/FALSE_POSITIVE_+_HIGH_→_NORMAL_(el_tipo_manda) (0.00s)
+        defects_test.go:39: StatusOf(FALSE_POSITIVE,HIGH) = CRITICAL, esperaba NORMAL
+--- FAIL: TestQA_M106_IsNormal (0.01s)
+    defects_test.go:53: M-106 (FALSE_POSITIVE) tiene estado ALERT, la regla dice NORMAL
+    defects_test.go:57: filtro ALERT devolvió [M-104 M-106], esperaba [M-104]
+--- FAIL: TestQA_SearchIsCaseInsensitive (0.01s)
+    defects_test.go:69: buscar "m-109" no encontró M-109 (obtuve [])
+    defects_test.go:69: buscar "m-10" no encontró M-109 (obtuve [])
+--- FAIL: TestQA_NegativePageIsValidationError (0.00s)
+    defects_test.go:80: page=-1 debería devolver un error de validación
+    defects_test.go:80: page=-100 debería devolver un error de validación
+FAIL
+FAIL	energyai/internal/meter	0.736s
+ok  	energyai/internal/server	1.008s
+?   	energyai/internal/store	[no test files]
+?   	energyai/internal/testutil	[no test files]
+FAIL

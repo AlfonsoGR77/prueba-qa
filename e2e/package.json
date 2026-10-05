@@ -1,0 +1,27 @@
+{
+  "name": "energyai-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pruebas E2E (UI + API) de EnergIA con Playwright",
+  "scripts": {
+    "setup": "npm ci && npx playwright install --with-deps chromium",
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:api": "playwright test --project=api",
+    "test:ui": "playwright test --project=chromium-bogota",
+    "test:headed": "playwright test --headed --project=chromium-bogota",
+    "test:docker": "cross-env BASE_URL=http://localhost:3000 playwright test",
+    "test:start-app": "cross-env START_APP=1 playwright test",
+    "test:all-browsers": "cross-env ALL_BROWSERS=1 playwright test",
+    "report": "playwright show-report",
+    "ejecuciones": "node scripts/ejecuciones.mjs",
+    "evidencias": "node scripts/capturar-evidencias.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@types/node": "^22.0.0",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.6.0"
+  }
+}

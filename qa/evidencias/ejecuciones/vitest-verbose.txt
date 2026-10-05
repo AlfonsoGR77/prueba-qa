@@ -1,0 +1,45 @@
+# Frontend · Vitest
+# Comando: (cd frontend) pnpm vitest run --reporter=verbose
+# Esperado: 17 passed | 4 expected fail
+# Código de salida: 0
+# Fecha:      2026-10-04T18:45:43.079Z
+# SO:         Windows_NT 10.0.26200 (win32 x64)
+# Go:         go version go1.27.1 windows/amd64
+# Node:       v24.21.0
+# pnpm:       10.34.6
+# App:        commit 15765d9 (código de la aplicación sin modificar)
+
+
+ RUN  v5.0.1 C:/prueba-qa/frontend
+
+ ✓ src/lib/format.tz.test.ts > hora de planta en la zona del operador (America/Bogota) > el entorno de este test está realmente en UTC-5 2ms
+ ✓ src/lib/format.tz.test.ts > hora de planta en la zona del operador (America/Bogota) > formatPlantTime no convierte 14:00 de planta a 09:00 (DEF-01) 9ms
+ ✓ src/lib/format.tz.test.ts > hora de planta en la zona del operador (America/Bogota) > formatPlantTime no cambia de día una lectura de medianoche (DEF-01) 2ms
+ ✓ src/lib/format.tz.test.ts > hora de planta en la zona del operador (America/Bogota) > formatPlantDay y formatPlantDate sí usan las partes UTC (control) 1ms
+ ✓ src/features/meters/hooks/useMeterFilters.test.ts > filtros de medidores en la URL > sin parámetros usa los valores por defecto 4ms
+ ✓ src/features/meters/hooks/useMeterFilters.test.ts > filtros de medidores en la URL > lee estado, búsqueda, orden y página 1ms
+ ✓ src/features/meters/hooks/useMeterFilters.test.ts > filtros de medidores en la URL > ignora valores inválidos en vez de mandarlos a la API 1ms
+ ✓ src/features/meters/hooks/useMeterFilters.test.ts > filtros de medidores en la URL > arma el body de POST /meter/getAll sin campos vacíos 1ms
+ ✓ src/components/ui/marks.test.tsx > el estado nunca depende solo del color > los sellos llevan texto 52ms
+ ✓ src/components/ui/marks.test.tsx > el estado nunca depende solo del color > un medidor normal no lleva sello, pero sí dice su estado 6ms
+ ✓ src/components/ui/marks.test.tsx > el estado nunca depende solo del color > la severidad se escribe en palabras 14ms
+ ✓ src/features/meters/components/Pagination.test.tsx > Pagination (límites que hoy funcionan) > count=0 size=10 page=1 248ms
+ ✓ src/features/meters/components/Pagination.test.tsx > Pagination (límites que hoy funcionan) > count=9 size=10 page=1 34ms
+ ✓ src/features/meters/components/Pagination.test.tsx > Pagination (límites que hoy funcionan) > count=10 size=10 page=1 26ms
+ ✓ src/features/meters/components/Pagination.test.tsx > Pagination (límites que hoy funcionan) > count=20 size=10 page=2 20ms
+ ✓ src/lib/format.test.ts > formato es-CO > usa punto de miles y coma decimal 33ms
+ ✓ src/lib/format.test.ts > formato es-CO > pone signo a la variación 1ms
+ ✓ src/lib/format.test.ts > formato es-CO > muestra la hora de planta sin convertirla a la zona del navegador 1ms
+ ✓ src/components/ui/marks.test.tsx > el estado nunca depende solo del color > la confianza es un meter accesible con su valor 245ms
+ ✓ src/features/meters/components/Pagination.test.tsx > Pagination (DEF-02) > con 12 medidores y 10 por página, "Siguiente" está habilitado en la página 1 72ms
+ ✓ src/features/meters/components/Pagination.test.tsx > Pagination (DEF-02) > con 11 medidores (size + 1) hay segunda página 15ms
+
+ Test Files  5 passed (5)
+      Tests  17 passed | 4 expected fail (21)
+   Start at  13:46:35
+   Duration  29.53s (environment 72%, setup 22%, import 4%, tests 1%, transform 1%)
+
+Environment  jsdom was created 5 times · 61.84s total, 72% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

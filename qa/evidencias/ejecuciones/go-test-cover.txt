@@ -1,0 +1,33 @@
+# Backend · cobertura por paquete
+# Comando: (cd backend) go test -cover ./...
+# Esperado: porcentaje por paquete
+# Código de salida: 0
+# Fecha:      2026-10-04T18:45:43.079Z
+# SO:         Windows_NT 10.0.26200 (win32 x64)
+# Go:         go version go1.27.1 windows/amd64
+# Node:       v24.21.0
+# pnpm:       10.34.6
+# App:        commit 15765d9 (código de la aplicación sin modificar)
+
+	energyai/cmd/api		coverage: 0.0% of statements
+	energyai/cmd/inspect		coverage: 0.0% of statements
+	energyai/docs		coverage: 0.0% of statements
+ok  	energyai/internal/ai	2.346s	coverage: 74.8% of statements
+ok  	energyai/internal/analysis	1.418s	coverage: 100.0% of statements
+ok  	energyai/internal/analysis/baseline	0.791s	coverage: 84.2% of statements
+ok  	energyai/internal/analysis/changes	0.781s	coverage: 87.0% of statements
+ok  	energyai/internal/analysis/classify	0.717s	coverage: 78.2% of statements
+	energyai/internal/analysis/model		coverage: 0.0% of statements
+ok  	energyai/internal/analysis/quality	0.806s	coverage: 93.6% of statements
+ok  	energyai/internal/analysis/stats	0.978s	coverage: 89.5% of statements
+	energyai/internal/analysis/variables		coverage: 0.0% of statements
+	energyai/internal/anomaly		coverage: 0.0% of statements
+ok  	energyai/internal/auth	2.228s	coverage: 28.3% of statements
+ok  	energyai/internal/config	0.725s	coverage: 47.6% of statements
+	energyai/internal/dashboard		coverage: 0.0% of statements
+ok  	energyai/internal/data	0.908s	coverage: 77.6% of statements
+ok  	energyai/internal/httpx	1.416s	coverage: 17.2% of statements
+ok  	energyai/internal/meter	1.174s	coverage: 81.9% of statements
+ok  	energyai/internal/server	1.154s	coverage: 95.0% of statements
+	energyai/internal/store		coverage: 0.0% of statements
+	energyai/internal/testutil		coverage: 0.0% of statements

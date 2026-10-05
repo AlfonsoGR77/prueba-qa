@@ -1,0 +1,33 @@
+# Backend · suite del equipo + tests QA verdes
+# Comando: (cd backend) go test ./...
+# Esperado: todo ok
+# Código de salida: 0
+# Fecha:      2026-10-04T18:45:43.079Z
+# SO:         Windows_NT 10.0.26200 (win32 x64)
+# Go:         go version go1.27.1 windows/amd64
+# Node:       v24.21.0
+# pnpm:       10.34.6
+# App:        commit 15765d9 (código de la aplicación sin modificar)
+
+?   	energyai/cmd/api	[no test files]
+?   	energyai/cmd/inspect	[no test files]
+?   	energyai/docs	[no test files]
+ok  	energyai/internal/ai	1.184s
+ok  	energyai/internal/analysis	0.672s
+ok  	energyai/internal/analysis/baseline	0.520s
+ok  	energyai/internal/analysis/changes	0.606s
+ok  	energyai/internal/analysis/classify	0.694s
+?   	energyai/internal/analysis/model	[no test files]
+ok  	energyai/internal/analysis/quality	0.727s
+ok  	energyai/internal/analysis/stats	0.684s
+?   	energyai/internal/analysis/variables	[no test files]
+?   	energyai/internal/anomaly	[no test files]
+ok  	energyai/internal/auth	2.135s
+ok  	energyai/internal/config	0.541s
+?   	energyai/internal/dashboard	[no test files]
+ok  	energyai/internal/data	0.653s
+ok  	energyai/internal/httpx	1.084s
+ok  	energyai/internal/meter	1.025s
+ok  	energyai/internal/server	1.103s
+?   	energyai/internal/store	[no test files]
+?   	energyai/internal/testutil	[no test files]
